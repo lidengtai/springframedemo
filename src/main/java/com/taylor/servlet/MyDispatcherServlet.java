@@ -22,7 +22,7 @@ import java.util.*;
  * 启动入口
  * 初始化流程
  * 1 定义成员变量
- *
+ * 2 简写流程步骤
  */
 public class MyDispatcherServlet extends HttpServlet {
 
@@ -69,8 +69,6 @@ public class MyDispatcherServlet extends HttpServlet {
 
         // 5 构造handlerMapping
         initHandlerMapping();
-
-        // 6 等待请求 匹配url 定位方法 反射调用执行
 
 
     }
@@ -242,6 +240,12 @@ public class MyDispatcherServlet extends HttpServlet {
         }
     }
 
+    /**
+     * @param req
+     * 等待请求 匹配url 定位方法 反射调用执行
+     * @param resp
+     * @throws Exception
+     */
     private void doDispatch(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         if (this.handlerMapping.isEmpty())return;
 
