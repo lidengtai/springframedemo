@@ -1,7 +1,5 @@
 package com.taylor.demo.service;
 
-import com.taylor.annotation.MyService;
-
 /**
  * @author taylor
  * @version V1.0
